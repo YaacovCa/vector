@@ -75,6 +75,10 @@ func (v Vector3) AngleBetween(o Vector3) float64 {
 	return math.Acos(cosTheta)
 }
 
+func (v Vector3) MultipliedByMatrix(m matrix3x3) Vector3 {
+	return m.MultiplyVector(v)
+}
+
 // Handy type for 3D vectors
 
 func Vector3Zero() Vector3 {
